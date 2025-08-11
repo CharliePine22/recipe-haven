@@ -1,0 +1,50 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.mainContainer p {
+  font-family: var(--font-inter);
+}
+
+.purposeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+}
+
+.purposeImage {
+  height: auto;
+  width: 50%;
+}
+
+.purposeList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.purposeList li {
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-playful-display);
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}

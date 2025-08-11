@@ -3,39 +3,18 @@ import styles from './home.module.css';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
 import { CgWebsite } from 'react-icons/cg';
+import { MdFoodBank } from 'react-icons/md';
+import Hero from '../../components/Hero/Hero';
+import Purpose from '@/components/Purpose/Purpose';
 
 const Home = () => {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to Recipe Haven!</h1>
+      {/* Home Page Banner */}
+      <Hero />
+      <Purpose />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Image
-              className={styles.logo}
-              src='/vercel.svg'
-              alt='Vercel logomark'
-              width={20}
-              height={20}
-            />
-            Create Account
-          </a>
-          <a
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={styles.secondary}
-          >
-            Get A Taste
-          </a>
-        </div>
-      </main>
+      {/* Footer with links
       <footer className={styles.footer}>
         <a
           href='https://github.com/CharliePine22/'
@@ -53,7 +32,7 @@ const Home = () => {
           <CgWebsite />
           Portfolio
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };
