@@ -1,15 +1,15 @@
-import React from 'react';
-import styles from './purpose.module.css';
-import { FaJournalWhills, FaSearch, FaCheck } from 'react-icons/fa';
-import Image from 'next/image';
-
+import React from "react";
+import styles from "./purpose.module.css";
+import { FaJournalWhills, FaSearch, FaCheck } from "react-icons/fa";
+import Image from "next/image";
+``;
 const Purpose = () => {
   return (
     <div className={styles.wrapper}>
       <main className={styles.mainContainer}>
         <Image
-          src='/images/stock/ig-recipe-post.png'
-          alt='Taking picture of food'
+          src="/images/stock/ig-recipe-post.png"
+          alt="Taking picture of food"
           width={500}
           height={500}
           className={styles.purposeImage}
@@ -21,24 +21,24 @@ const Purpose = () => {
           <h3 className={styles.title}>What is Recipe Nest?</h3>
           <ul className={styles.purposeList}>
             <li>
-              <h6>Gather All Your Recipes</h6>
+              <h4>Gather All Your Recipes</h4>
               <p>
-                <FaJournalWhills size={25} />
+                <FaJournalWhills size={30} />
                 Collect recipes from all your socials, no more endless scrolling
                 to find that one dish you swore you’d try.
               </p>
             </li>
             <li>
-              <h6>Tailor Your Meals</h6>
+              <h4>Tailor Your Meals</h4>
               <p>
-                <FaSearch size={25} />
+                <FaSearch size={30} />
                 Search by name, cuisine, or ingredient, and filter by mealtime.
               </p>
             </li>
             <li>
-              <h6>Fully Informed</h6>
+              <h4>Fully Informed</h4>
               <p>
-                <FaCheck size={25} />
+                <FaCheck size={30} />
                 Each recipe will display its ingredients, instructions, and a
                 link to the original source. Even the nutrition facts!
               </p>
