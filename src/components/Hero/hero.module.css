@@ -1,5 +1,5 @@
 .contentContainer {
-  padding: 25px 50px;
+  padding: 25px 70px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -37,7 +37,8 @@
 
 a.primary {
   background: green;
-  color: var(--background);
+  color: white;
+  /* color: var(--background); */
   gap: 8px;
 }
 
@@ -48,10 +49,11 @@ a.secondary {
 
 .description {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 30px;
   font-family: var(--font-inter);
   margin: 15px 0 30px;
+  max-width: 75%;
 }
 
 .heroBackgroundImg {
@@ -122,7 +124,7 @@ a.secondary {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   position: relative;
 }
 
@@ -156,5 +158,15 @@ a.secondary {
   .heroImage {
     transform: scaleX(-1) rotate(32deg);
     width: 100%;
+  }
+
+  .contentContainer {
+    padding: 25px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitleContainer {
+    text-align: center;
   }
 }
