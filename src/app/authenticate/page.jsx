@@ -1,5 +1,8 @@
+'use client';
+
 import { FormEvent } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import styles from './authenticate.module.css';
 
 const Authenticate = () => {
   const router = useRouter();
@@ -11,7 +14,7 @@ const Authenticate = () => {
     const email = formData.get('email');
     const password = formData.get('password');
 
-    const response = await fetch('/api/auth/login', {
+    const response = await fetch('/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -25,11 +28,24 @@ const Authenticate = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type='email' name='email' placeholder='Email' required />
-      <input type='password' name='password' placeholder='Password' required />
-      <button type='submit'>Login</button>
-    </form>
+    <main className={styles.wrapper}>
+      <div className={styles.titleContainer}>
+        <h2>Recipe Nest</h2>
+        <h5>Log into your account below.</h5>
+      </div>
+      <div className={styles.formContainer}>
+        <form onSubmit={handleSubmit}>
+          <input type='email' name='email' placeholder='Email' required />
+          <input
+            type='password'
+            name='password'
+            placeholder='Password'
+            required
+          />
+          <button type='submit'>Login</button>
+        </form>
+      </div>
+    </main>
   );
 };
 

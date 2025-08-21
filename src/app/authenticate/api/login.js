@@ -1,6 +1,7 @@
 import { signIn } from '@/auth';
 
 export default async function handler(req, res) {
+  console.log(req);
   try {
     const { email, password } = req.body;
     await signIn('credentials', { email, password });
