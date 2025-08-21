@@ -1,9 +1,21 @@
+.displayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  border-radius: 10px;
+  background-color: darkgreen;
+  filter: saturate(0.5) drop-shadow(2px 4px 6px black);
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70%;
+  width: 100%;
   align-items: center;
+  padding: 0 40px;
 }
 
 .formContainer form {
@@ -11,25 +23,43 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 75%;
+  width: 100%;
 }
 
 .formContainer input {
   padding: 5;
-  margin: 5 0;
+  margin-bottom: 10px;
   background-color: transparent;
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgb(164, 164, 164);
   border-radius: 5px;
   width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 8px;
+  font-family: var(--font-lato);
+}
+
+.formContainer input:focus {
+  outline: none;
+  border: 2px solid white;
+}
+
+.formContainer input::placeholder {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .formContainer button {
-  width: 100%;
-  padding: 8px 5px;
-  border-radius: 5px;
   cursor: pointer;
   border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px 5px;
+  margin-top: 30px;
+  background-color: white;
+  color: darkgreen;
+  font-size: 16px;
 }
 
 .titleContainer {
@@ -38,6 +68,22 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  padding: 0 75px;
+}
+
+.titleContainer h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-family: var(--font-cursive);
+  font-weight: 500;
+}
+
+.titleContainer h5 {
+  color: white;
+  font-size: 18px;
+  font-family: var(--font-lato);
+  font-weight: 300;
 }
 
 .wrapper {
