@@ -8,6 +8,7 @@ import {
   Lato,
 } from 'next/font/google';
 import './globals.css';
+import { UserProvider } from '../providers/UserContext';
 
 const geistSans = Quicksand({
   variable: '--font-playful-display',
@@ -41,7 +42,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${eduCursive.variable} ${lato.variable}`}
       >
-        {children}
+        <UserProvider>{children}</UserProvider>
       </body>
     </html>
   );

@@ -1,0 +1,35 @@
+.navList {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.navList li {
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.navList li:hover {
+  font-weight: 600;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.navListContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(0deg, yellow, rgb(1, 194, 1));
+}
