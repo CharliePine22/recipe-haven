@@ -12,14 +12,6 @@ export const Dashboard = () => {
       <h2>Welcome {user.name}</h2>
     </main>
   );
-  const { user } = useContext(UserContext);
-  console.log(user);
-  return (
-    <main>
-      <DashNav />
-      <h2>Welcome {user.name}</h2>
-    </main>
-  );
 };
 
 export default Dashboard;
