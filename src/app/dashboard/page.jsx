@@ -1,9 +1,9 @@
-"use client";
-import React, { useContext, useState } from "react";
-import { UserContext } from "../../providers/UserContext";
-import DashNav from "@/components/DashNav/DashNav";
-import styles from "./dashboard.module.css";
-import { savedRecipes } from "@/app/dashboard/seed";
+'use client';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../providers/UserContext';
+import DashNav from '@/components/DashNav/DashNav';
+import styles from './dashboard.module.css';
+import { savedRecipes } from '@/app/dashboard/seed';
 
 export const Dashboard = () => {
   const { user } = useContext(UserContext);
@@ -21,11 +21,14 @@ export const Dashboard = () => {
 
         <div className={styles.dashBody}>
           <p>Here are some dishes you've yet to try!</p>
-          <p>Any of these look good?</p>
           <div className={styles.recipeContainer}>
             {featuredRecipes.map((recipe) => {
               return (
-                <div className={styles.featuredRecipe} key={recipe.id}>
+                <div
+                  className={styles.featuredRecipe}
+                  key={recipe.id}
+                  onClick={() => console.log(recipe)}
+                >
                   <div
                     className={styles.recipeImageContainer}
                     style={{ backgroundImage: `url(${recipe.image})` }}
