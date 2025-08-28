@@ -29,7 +29,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 75px;
+  position: sticky;
+    top: 0;
   width: 100%;
   background: linear-gradient(0deg, yellow, rgb(1, 194, 1));
 }

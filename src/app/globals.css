@@ -23,6 +23,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1,h2,h3 {
+  font-family: var(--font-cursive);
+}
+
+h4, h5, h6 {
+    font-family: var(--font-lato);
+
+} 
 
 * {
   box-sizing: border-box;

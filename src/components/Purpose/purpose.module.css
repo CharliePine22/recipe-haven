@@ -69,10 +69,6 @@
 }
 
 @media (max-width: 700px) {
-  .purposeImage {
-    /* height: 250px; */
-  }
-
   .wrapper {
     padding: 50px 10px;
   }
