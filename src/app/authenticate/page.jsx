@@ -8,6 +8,8 @@ import { UserContext } from '../../providers/UserContext';
 
 const Authenticate = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [hasError, setHasError] = useState(false);
   const sourceLoaded = useLoadImages('/images/stock/cozy-kitchen.jpg');
   const { user, setUser } = useContext(UserContext);
 
@@ -27,17 +29,16 @@ const Authenticate = () => {
 
   const authenticateUser = (data) => {
     const { email, password } = data;
-    const foundUser = fakeDB.find(
-      (user) => email == user.email && password == user.password
-    );
+    const foundUser = fakeDB.find((user) => email == user.email);
 
-    if (foundUser) {
+    if (foundUser && foundUser.password == password) {
       setUser(foundUser);
       localStorage.setItem('user', JSON.stringify(foundUser));
       return true;
     } else {
+      setHasError(true);
+      setError('Incorrect email or password.');
       console.log('WRONG');
-
       return false;
     }
   };
@@ -79,9 +80,21 @@ const Authenticate = () => {
               <h5>Log into your account below.</h5>
             </div>
             <div className={styles.formContainer}>
+              <span className={styles.error}>{error}</span>
               <form onSubmit={handleSubmit}>
-                <input type='email' name='email' placeholder='Email' required />
                 <input
+                  style={{
+                    borderColor: hasError ? 'red' : 'rgb(164, 164, 164)',
+                  }}
+                  type='email'
+                  name='email'
+                  placeholder='Email'
+                  required
+                />
+                <input
+                  style={{
+                    borderColor: hasError ? 'red' : 'rgb(164, 164, 164)',
+                  }}
                   type='password'
                   name='password'
                   placeholder='Password'

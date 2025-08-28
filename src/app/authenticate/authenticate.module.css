@@ -11,6 +11,12 @@
   border: 2px solid white;
 }
 
+.error {
+  margin-bottom: 12px;
+  color: red;
+  font-weight: 600;
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
